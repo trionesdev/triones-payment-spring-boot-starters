@@ -26,6 +26,12 @@
             <optional>true</optional>
         </dependency>
         <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
             <groupId>com.moensun.pay</groupId>
             <artifactId>moensun-pay-wxpay</artifactId>
         </dependency>
