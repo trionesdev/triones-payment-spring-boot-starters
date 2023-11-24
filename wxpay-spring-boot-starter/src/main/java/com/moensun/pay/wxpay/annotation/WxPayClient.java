@@ -6,7 +6,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Inherited
-public @interface WeiXinPayClient {
+public @interface WxPayClient {
     String appId() default "";
 
     String mchId() default "";
