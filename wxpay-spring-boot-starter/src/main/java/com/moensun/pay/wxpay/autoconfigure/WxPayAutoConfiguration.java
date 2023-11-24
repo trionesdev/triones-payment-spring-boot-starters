@@ -1,9 +1,8 @@
 package com.moensun.pay.wxpay.autoconfigure;
 
+import com.moensun.pay.wxpay.v3.WxPay;
+import com.moensun.pay.wxpay.v3.WxPayTemplate;
 import com.moensun.pay.wxpay.v3.payment.WxPayConfig;
-import com.moensun.pay.wxpay.v3.payment.app.WxPayApp;
-import com.moensun.pay.wxpay.v3.payment.jsapi.WxPayJsApi;
-import com.moensun.pay.wxpay.v3.payment.nativepay.WxPayNative;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -24,18 +23,8 @@ public class WxPayAutoConfiguration {
     private final WxPayProperties wxPayProperties;
 
     @Bean
-    public WxPayJsApi wxPayJsApi() {
-        return new WxPayJsApi(wxPayConfig());
-    }
-
-    @Bean
-    public WxPayNative wxPayNative() {
-        return new WxPayNative(wxPayConfig());
-    }
-
-    @Bean
-    public WxPayApp wxPayApp() {
-        return new WxPayApp(wxPayConfig());
+    public WxPayTemplate wxPay() {
+        return new WxPay(wxPayConfig());
     }
 
     private WxPayConfig wxPayConfig() {
