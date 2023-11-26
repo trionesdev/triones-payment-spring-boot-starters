@@ -16,7 +16,7 @@ import java.util.Base64;
 @Slf4j
 @RequiredArgsConstructor
 @Configuration
-@ConditionalOnProperty(prefix = "wxpay", value = {"enabled"}, havingValue = "true")
+@ConditionalOnProperty(prefix = "triones.wxpay", value = {"enabled"}, havingValue = "true")
 @EnableConfigurationProperties(value = {WxPayProperties.class})
 public class WxPayAutoConfiguration {
 
