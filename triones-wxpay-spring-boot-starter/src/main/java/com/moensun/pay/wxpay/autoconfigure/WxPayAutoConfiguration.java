@@ -44,7 +44,7 @@ public class WxPayAutoConfiguration {
                 .privateKeyPath(wxPayProperties.getPrivateKeyPath())
                 .privateCertPath(wxPayProperties.getPrivateCertPath())
                 .apiV3Key(wxPayProperties.getApiV3Key())
-                .transactionNotifyUrl(wxPayProperties.getRefundNotifyUrl())
+                .transactionNotifyUrl(wxPayProperties.getTransactionNotifyUrl())
                 .refundNotifyUrl(wxPayProperties.getRefundNotifyUrl())
                 .build();
     }
