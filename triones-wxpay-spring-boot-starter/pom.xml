@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.moensun.pay</groupId>
+        <groupId>com.trionesdev.pay</groupId>
         <artifactId>triones-pay-spring-boot-starters</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
@@ -32,7 +32,7 @@
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>com.moensun.pay</groupId>
+            <groupId>com.trionesdev.pay</groupId>
             <artifactId>triones-pay-wxpay</artifactId>
         </dependency>
     </dependencies>

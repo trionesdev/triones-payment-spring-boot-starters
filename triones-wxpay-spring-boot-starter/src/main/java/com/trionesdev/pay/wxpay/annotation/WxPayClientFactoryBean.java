@@ -1,7 +1,7 @@
-package com.moensun.pay.wxpay.annotation;
+package com.trionesdev.pay.wxpay.annotation;
 
-import com.moensun.pay.wxpay.v3.WxPay;
-import com.moensun.pay.wxpay.v3.payment.WxPayConfig;
+import com.trionesdev.pay.wxpay.v3.WxPay;
+import com.trionesdev.pay.wxpay.v3.payment.WxPayConfig;
 import lombok.Setter;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeansException;

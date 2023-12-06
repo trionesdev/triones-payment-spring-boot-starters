@@ -1,4 +1,4 @@
-package com.moensun.pay.wxpay.autoconfigure;
+package com.trionesdev.pay.wxpay.autoconfigure;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

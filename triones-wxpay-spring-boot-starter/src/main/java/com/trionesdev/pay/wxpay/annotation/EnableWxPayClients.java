@@ -1,4 +1,4 @@
-package com.moensun.pay.wxpay.annotation;
+package com.trionesdev.pay.wxpay.annotation;
 
 import org.springframework.context.annotation.Import;
 
