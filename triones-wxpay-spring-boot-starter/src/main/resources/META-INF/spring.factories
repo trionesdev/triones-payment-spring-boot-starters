@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.trionesdev.pay.wxpay.autoconfigure.WxPayAutoConfiguration
+com.trionesdev.payment.wxpay.autoconfigure.WxPayAutoConfiguration

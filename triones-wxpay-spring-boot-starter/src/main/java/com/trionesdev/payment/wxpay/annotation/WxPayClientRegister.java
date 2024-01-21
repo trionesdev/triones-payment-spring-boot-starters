@@ -1,4 +1,4 @@
-package com.trionesdev.pay.wxpay.annotation;
+package com.trionesdev.payment.wxpay.annotation;
 
 import org.springframework.beans.factory.annotation.AnnotatedBeanDefinition;
 import org.springframework.beans.factory.annotation.AnnotatedGenericBeanDefinition;

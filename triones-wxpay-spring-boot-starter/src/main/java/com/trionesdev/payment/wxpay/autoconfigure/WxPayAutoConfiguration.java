@@ -1,8 +1,8 @@
-package com.trionesdev.pay.wxpay.autoconfigure;
+package com.trionesdev.payment.wxpay.autoconfigure;
 
-import com.trionesdev.pay.wxpay.v3.WxPay;
-import com.trionesdev.pay.wxpay.v3.WxPayTemplate;
-import com.trionesdev.pay.wxpay.v3.payment.WxPayConfig;
+import com.trionesdev.payment.wxpay.v3.WxPay;
+import com.trionesdev.payment.wxpay.v3.WxPayTemplate;
+import com.trionesdev.payment.wxpay.v3.payment.WxPayConfig;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
