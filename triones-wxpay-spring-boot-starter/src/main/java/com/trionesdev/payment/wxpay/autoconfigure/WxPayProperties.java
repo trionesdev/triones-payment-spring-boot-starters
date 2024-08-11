@@ -3,7 +3,7 @@ package com.trionesdev.payment.wxpay.autoconfigure;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties(prefix = "triones.wxpay")
+@ConfigurationProperties(prefix = "triones.payment.wxpay")
 @Data
 public class WxPayProperties {
     private Boolean enabled;
