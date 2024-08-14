@@ -3,6 +3,8 @@ package com.trionesdev.payment.wxpay.autoconfigure;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
+import java.util.Map;
+
 @ConfigurationProperties(prefix = "triones.payment.wxpay")
 @Data
 public class WxPayProperties {
@@ -18,4 +20,6 @@ public class WxPayProperties {
     private String privateCertPath;
     private String transactionNotifyUrl;
     private String refundNotifyUrl;
+    private Map<String,String> transactionNotifyUrls;
+    private Map<String,String> refundNotifyUrls;
 }
