@@ -46,6 +46,8 @@ public class WxPayAutoConfiguration {
                 .apiV3Key(wxPayProperties.getApiV3Key())
                 .transactionNotifyUrl(wxPayProperties.getTransactionNotifyUrl())
                 .refundNotifyUrl(wxPayProperties.getRefundNotifyUrl())
+                .transactionNotifyUrls(wxPayProperties.getTransactionNotifyUrls())
+                .refundNotifyUrls(wxPayProperties.getRefundNotifyUrls())
                 .build();
     }
 
