@@ -8,7 +8,7 @@
   <name>Triones:Payment:BootStarters</name>
   <url>http://maven.apache.org</url>
   <modules>
-    <module>triones-wxpay-spring-boot-starter</module>
+    <module>triones-wechatpay-spring-boot-starter</module>
   </modules>
 
   <properties>
@@ -41,7 +41,7 @@
 
       <dependency>
         <groupId>com.trionesdev.payment</groupId>
-        <artifactId>triones-wxpay-spring-boot-starter</artifactId>
+        <artifactId>triones-wechatpay-spring-boot-starter</artifactId>
         <version>${project.version}</version>
       </dependency>
     </dependencies>

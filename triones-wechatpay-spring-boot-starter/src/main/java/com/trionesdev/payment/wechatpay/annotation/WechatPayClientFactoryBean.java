@@ -1,7 +1,7 @@
-package com.trionesdev.payment.wxpay.annotation;
+package com.trionesdev.payment.wechatpay.annotation;
 
-import com.trionesdev.payment.wxpay.v3.WxPay;
-import com.trionesdev.payment.wxpay.v3.payment.WxPayConfig;
+import com.trionesdev.payment.wechatpay.v3.WechatPay;
+import com.trionesdev.payment.wechatpay.v3.payment.WechatPayConfig;
 import lombok.Setter;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeansException;
@@ -18,7 +18,7 @@ import java.lang.reflect.Proxy;
 import java.util.Base64;
 
 @Setter
-public class WxPayClientFactoryBean implements FactoryBean<Object>, InitializingBean,
+public class WechatPayClientFactoryBean implements FactoryBean<Object>, InitializingBean,
         ApplicationContextAware, BeanFactoryAware {
 
     private String appId;
@@ -70,7 +70,7 @@ public class WxPayClientFactoryBean implements FactoryBean<Object>, Initializing
         if (StringUtils.isBlank(privateCert) && StringUtils.isNotBlank(privateCertBase64)) {
             privateCert = new String(Base64.getDecoder().decode(privateCertBase64));
         }
-        WxPayConfig wxPayConfig = WxPayConfig.builder()
+        WechatPayConfig wxPayConfig = WechatPayConfig.builder()
                 .appId(appId)
                 .mchId(mchId)
                 .privateKey(privateKey)
@@ -81,7 +81,7 @@ public class WxPayClientFactoryBean implements FactoryBean<Object>, Initializing
                 .transactionNotifyUrl(transactionNotifyUrl)
                 .refundNotifyUrl(refundNotifyUrl)
                 .build();
-        WxPay wxPay = new WxPay(wxPayConfig);
+        WechatPay wxPay = new WechatPay(wxPayConfig);
         return (T) this.type.cast(Proxy.newProxyInstance(this.type.getClassLoader(), new Class[]{this.type}, new InvocationHandler() {
             @Override
             public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {

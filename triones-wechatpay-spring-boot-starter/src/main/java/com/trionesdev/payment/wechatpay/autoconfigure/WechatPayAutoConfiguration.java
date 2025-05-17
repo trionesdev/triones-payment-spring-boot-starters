@@ -1,8 +1,8 @@
-package com.trionesdev.payment.wxpay.autoconfigure;
+package com.trionesdev.payment.wechatpay.autoconfigure;
 
-import com.trionesdev.payment.wxpay.v3.WxPay;
-import com.trionesdev.payment.wxpay.v3.WxPayTemplate;
-import com.trionesdev.payment.wxpay.v3.payment.WxPayConfig;
+import com.trionesdev.payment.wechatpay.v3.WechatPay;
+import com.trionesdev.payment.wechatpay.v3.WechatPayTemplate;
+import com.trionesdev.payment.wechatpay.v3.payment.WechatPayConfig;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -17,17 +17,17 @@ import java.util.Base64;
 @RequiredArgsConstructor
 @Configuration
 @ConditionalOnProperty(prefix = "triones.wxpay", value = {"enabled"}, havingValue = "true")
-@EnableConfigurationProperties(value = {WxPayProperties.class})
-public class WxPayAutoConfiguration {
+@EnableConfigurationProperties(value = {WechatPayProperties.class})
+public class WechatPayAutoConfiguration {
 
-    private final WxPayProperties wxPayProperties;
+    private final WechatPayProperties wxPayProperties;
 
     @Bean
-    public WxPayTemplate wxPay() {
-        return new WxPay(wxPayConfig());
+    public WechatPayTemplate wxPay() {
+        return new WechatPay(wxPayConfig());
     }
 
-    private WxPayConfig wxPayConfig() {
+    private WechatPayConfig wxPayConfig() {
         String privateKey = wxPayProperties.getPrivateKey();
         String privateCert = wxPayProperties.getPrivateCert();
         if (StringUtils.isBlank(privateKey) && StringUtils.isNotBlank(wxPayProperties.getPrivateKeyBase64())) {
@@ -36,7 +36,7 @@ public class WxPayAutoConfiguration {
         if (StringUtils.isBlank(privateCert) && StringUtils.isNotBlank(wxPayProperties.getPrivateCertBase64())) {
             privateCert = new String(Base64.getDecoder().decode(wxPayProperties.getPrivateCertBase64()));
         }
-        return WxPayConfig.builder()
+        return WechatPayConfig.builder()
                 .appId(wxPayProperties.getAppId())
                 .mchId(wxPayProperties.getMchId())
                 .privateKey(privateKey)

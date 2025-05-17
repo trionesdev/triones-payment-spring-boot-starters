@@ -1,4 +1,4 @@
-package com.trionesdev.payment.wxpay.annotation;
+package com.trionesdev.payment.wechatpay.annotation;
 
 import java.lang.annotation.*;
 
@@ -6,7 +6,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Inherited
-public @interface WxPayClient {
+public @interface WechatPayClient {
     String appId() default "";
 
     String mchId() default "";

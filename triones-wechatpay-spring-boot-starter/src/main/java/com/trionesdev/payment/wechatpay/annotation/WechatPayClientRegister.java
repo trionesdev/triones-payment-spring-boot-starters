@@ -1,4 +1,4 @@
-package com.trionesdev.payment.wxpay.annotation;
+package com.trionesdev.payment.wechatpay.annotation;
 
 import org.springframework.beans.factory.annotation.AnnotatedBeanDefinition;
 import org.springframework.beans.factory.annotation.AnnotatedGenericBeanDefinition;
@@ -23,7 +23,7 @@ import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class WxPayClientRegister implements ImportBeanDefinitionRegistrar, ResourceLoaderAware, EnvironmentAware {
+public class WechatPayClientRegister implements ImportBeanDefinitionRegistrar, ResourceLoaderAware, EnvironmentAware {
     private ResourceLoader resourceLoader;
 
     private Environment environment;
@@ -45,12 +45,12 @@ public class WxPayClientRegister implements ImportBeanDefinitionRegistrar, Resou
 
     private void registerWxPayClients(AnnotationMetadata metadata, BeanDefinitionRegistry registry) {
         LinkedHashSet<BeanDefinition> candidateComponents = new LinkedHashSet<>();
-        Map<String, Object> attrs = metadata.getAnnotationAttributes(EnableWxPayClients.class.getName());
+        Map<String, Object> attrs = metadata.getAnnotationAttributes(EnableWechatPayClients.class.getName());
         final Class<?>[] channels = attrs == null ? null : (Class<?>[]) attrs.get("clients");
         if (channels == null || channels.length == 0) {
             ClassPathScanningCandidateComponentProvider scanner = getScanner();
             scanner.setResourceLoader(this.resourceLoader);
-            scanner.addIncludeFilter(new AnnotationTypeFilter(WxPayClient.class));
+            scanner.addIncludeFilter(new AnnotationTypeFilter(WechatPayClient.class));
             Set<String> basePackages = getBasePackages(metadata);
             for (String basePackage : basePackages) {
                 candidateComponents.addAll(scanner.findCandidateComponents(basePackage));
@@ -66,7 +66,7 @@ public class WxPayClientRegister implements ImportBeanDefinitionRegistrar, Resou
                 AnnotatedBeanDefinition beanDefinition = (AnnotatedBeanDefinition) candidateComponent;
                 AnnotationMetadata annotationMetadata = beanDefinition.getMetadata();
                 Map<String, Object> attributes = annotationMetadata
-                        .getAnnotationAttributes(WxPayClient.class.getCanonicalName());
+                        .getAnnotationAttributes(WechatPayClient.class.getCanonicalName());
                 registerWxPayClient(registry, annotationMetadata, attributes);
             }
         }
@@ -78,7 +78,7 @@ public class WxPayClientRegister implements ImportBeanDefinitionRegistrar, Resou
         ConfigurableBeanFactory beanFactory = registry instanceof ConfigurableBeanFactory
                 ? (ConfigurableBeanFactory) registry : null;
         Class clazz = ClassUtils.resolveClassName(className, null);
-        WxPayClientFactoryBean factoryBean = new WxPayClientFactoryBean();
+        WechatPayClientFactoryBean factoryBean = new WechatPayClientFactoryBean();
         factoryBean.setBeanFactory(beanFactory);
         factoryBean.setType(clazz);
         BeanDefinitionBuilder definition = BeanDefinitionBuilder.genericBeanDefinition(clazz, () -> {
@@ -120,7 +120,7 @@ public class WxPayClientRegister implements ImportBeanDefinitionRegistrar, Resou
 
     protected Set<String> getBasePackages(AnnotationMetadata importingClassMetadata) {
         Map<String, Object> attributes = importingClassMetadata
-                .getAnnotationAttributes(EnableWxPayClients.class.getCanonicalName());
+                .getAnnotationAttributes(EnableWechatPayClients.class.getCanonicalName());
 
         Set<String> basePackages = new HashSet<>();
         for (String pkg : (String[]) attributes.get("value")) {

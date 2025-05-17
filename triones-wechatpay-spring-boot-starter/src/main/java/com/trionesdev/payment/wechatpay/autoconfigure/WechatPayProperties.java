@@ -1,11 +1,11 @@
-package com.trionesdev.payment.wxpay.autoconfigure;
+package com.trionesdev.payment.wechatpay.autoconfigure;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties(prefix = "triones.wxpay")
+@ConfigurationProperties(prefix = "triones.wechatpay")
 @Data
-public class WxPayProperties {
+public class WechatPayProperties {
     private Boolean enabled;
     private String appId;
     private String mchId;
