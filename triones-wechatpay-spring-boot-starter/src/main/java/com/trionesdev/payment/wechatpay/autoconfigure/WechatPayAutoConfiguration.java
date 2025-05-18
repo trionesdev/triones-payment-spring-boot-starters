@@ -1,7 +1,6 @@
 package com.trionesdev.payment.wechatpay.autoconfigure;
 
 import com.trionesdev.payment.wechatpay.v3.WechatPay;
-import com.trionesdev.payment.wechatpay.v3.WechatPayTemplate;
 import com.trionesdev.payment.wechatpay.v3.WechatPayConfig;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -16,14 +15,14 @@ import java.util.Base64;
 @Slf4j
 @RequiredArgsConstructor
 @Configuration
-@ConditionalOnProperty(prefix = "triones.wxpay", value = {"enabled"}, havingValue = "true")
+@ConditionalOnProperty(prefix = "triones.wechatpay", value = {"enabled"}, havingValue = "true")
 @EnableConfigurationProperties(value = {WechatPayProperties.class})
 public class WechatPayAutoConfiguration {
 
     private final WechatPayProperties wxPayProperties;
 
     @Bean
-    public WechatPayTemplate wxPay() {
+    public WechatPay wxPay() {
         return new WechatPay(wxPayConfig());
     }
 
