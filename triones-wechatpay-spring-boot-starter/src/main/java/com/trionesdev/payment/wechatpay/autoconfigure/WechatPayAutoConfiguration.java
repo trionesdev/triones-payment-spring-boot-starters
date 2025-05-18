@@ -2,7 +2,7 @@ package com.trionesdev.payment.wechatpay.autoconfigure;
 
 import com.trionesdev.payment.wechatpay.v3.WechatPay;
 import com.trionesdev.payment.wechatpay.v3.WechatPayTemplate;
-import com.trionesdev.payment.wechatpay.v3.payment.WechatPayConfig;
+import com.trionesdev.payment.wechatpay.v3.WechatPayConfig;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;

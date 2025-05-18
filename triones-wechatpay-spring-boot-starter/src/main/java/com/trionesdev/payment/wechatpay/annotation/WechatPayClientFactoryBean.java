@@ -1,7 +1,7 @@
 package com.trionesdev.payment.wechatpay.annotation;
 
 import com.trionesdev.payment.wechatpay.v3.WechatPay;
-import com.trionesdev.payment.wechatpay.v3.payment.WechatPayConfig;
+import com.trionesdev.payment.wechatpay.v3.WechatPayConfig;
 import lombok.Setter;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeansException;
