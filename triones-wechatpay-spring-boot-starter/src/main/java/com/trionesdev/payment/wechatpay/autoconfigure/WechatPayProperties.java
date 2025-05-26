@@ -3,7 +3,9 @@ package com.trionesdev.payment.wechatpay.autoconfigure;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties(prefix = "triones.wechatpay")
+import java.util.Map;
+
+@ConfigurationProperties(prefix = "triones.payment.wechatpay")
 @Data
 public class WechatPayProperties {
     private Boolean enabled;
@@ -18,4 +20,6 @@ public class WechatPayProperties {
     private String privateCertPath;
     private String transactionNotifyUrl;
     private String refundNotifyUrl;
+    private Map<String,String> transactionNotifyUrls;
+    private Map<String,String> refundNotifyUrls;
 }

@@ -15,7 +15,7 @@ import java.util.Base64;
 @Slf4j
 @RequiredArgsConstructor
 @Configuration
-@ConditionalOnProperty(prefix = "triones.wechatpay", value = {"enabled"}, havingValue = "true")
+@ConditionalOnProperty(prefix = "triones.payment.wechatpay", value = {"enabled"}, havingValue = "true")
 @EnableConfigurationProperties(value = {WechatPayProperties.class})
 public class WechatPayAutoConfiguration {
 
@@ -45,6 +45,8 @@ public class WechatPayAutoConfiguration {
                 .apiV3Key(wxPayProperties.getApiV3Key())
                 .transactionNotifyUrl(wxPayProperties.getTransactionNotifyUrl())
                 .refundNotifyUrl(wxPayProperties.getRefundNotifyUrl())
+                .transactionNotifyUrls(wxPayProperties.getTransactionNotifyUrls())
+                .refundNotifyUrls(wxPayProperties.getRefundNotifyUrls())
                 .build();
     }
 
