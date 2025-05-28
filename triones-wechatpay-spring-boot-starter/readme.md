@@ -1,0 +1,1 @@
+# WechatPay Spring Boot 自动装配
