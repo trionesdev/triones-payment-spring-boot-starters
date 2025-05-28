@@ -12,7 +12,7 @@
     <dependencies>
         <dependency>
             <groupId>com.trionesdev.payment</groupId>
-            <artifactId>triones-payment-dependencies</artifactId>
+            <artifactId>triones-payment-spring-boot-dependencies</artifactId>
             <version>版本号</version>
             <type>pom</type>
             <scope>import</scope>
