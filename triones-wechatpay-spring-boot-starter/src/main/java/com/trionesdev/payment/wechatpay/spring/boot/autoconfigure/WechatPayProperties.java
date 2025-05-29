@@ -1,4 +1,4 @@
-package com.trionesdev.payment.wechatpay.autoconfigure;
+package com.trionesdev.payment.wechatpay.spring.boot.autoconfigure;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

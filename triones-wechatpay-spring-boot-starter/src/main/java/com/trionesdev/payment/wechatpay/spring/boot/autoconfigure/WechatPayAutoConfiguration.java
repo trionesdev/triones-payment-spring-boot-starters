@@ -1,4 +1,4 @@
-package com.trionesdev.payment.wechatpay.autoconfigure;
+package com.trionesdev.payment.wechatpay.spring.boot.autoconfigure;
 
 import com.trionesdev.payment.wechatpay.v3.WechatPay;
 import com.trionesdev.payment.wechatpay.v3.WechatPayConfig;

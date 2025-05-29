@@ -1,1 +1,1 @@
-com.trionesdev.payment.wechatpay.autoconfigure.WechatPayAutoConfiguration
+com.trionesdev.payment.wechatpay.spring.boot.autoconfigure.WechatPayAutoConfiguration

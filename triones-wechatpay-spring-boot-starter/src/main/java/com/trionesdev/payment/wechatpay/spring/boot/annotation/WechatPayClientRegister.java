@@ -1,4 +1,4 @@
-package com.trionesdev.payment.wechatpay.annotation;
+package com.trionesdev.payment.wechatpay.spring.boot.annotation;
 
 import org.springframework.beans.factory.annotation.AnnotatedBeanDefinition;
 import org.springframework.beans.factory.annotation.AnnotatedGenericBeanDefinition;

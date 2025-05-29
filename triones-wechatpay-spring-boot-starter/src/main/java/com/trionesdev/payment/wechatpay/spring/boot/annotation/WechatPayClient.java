@@ -1,4 +1,4 @@
-package com.trionesdev.payment.wechatpay.annotation;
+package com.trionesdev.payment.wechatpay.spring.boot.annotation;
 
 import java.lang.annotation.*;
 
