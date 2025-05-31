@@ -22,6 +22,7 @@
                 <version>3.3.0</version>
                 <type>pom</type>
                 <scope>import</scope>
+                <optional>true</optional>
             </dependency>
             <dependency>
                 <groupId>com.trionesdev.payment</groupId>
