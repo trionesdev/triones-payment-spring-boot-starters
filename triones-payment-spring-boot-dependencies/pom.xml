@@ -45,13 +45,6 @@
         </dependencies>
     </dependencyManagement>
 
-    <distributionManagement>
-        <snapshotRepository>
-            <id>moensun</id>
-            <url>https://nexus.moensun.com/repository/maven-snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
-
     <build>
         <plugins>
             <plugin>
@@ -72,4 +65,17 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>moensun</id>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>moensun</id>
+                    <url>https://nexus.moensun.com/repository/maven-snapshots/</url>
+                </snapshotRepository>
+            </distributionManagement>
+        </profile>
+    </profiles>
+
 </project>
