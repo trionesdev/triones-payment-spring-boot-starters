@@ -20,6 +20,8 @@ public class WechatPayProperties {
     private String privateCertPath;
     private String transactionNotifyUrl;
     private String refundNotifyUrl;
-    private Map<String,String> transactionNotifyUrls;
-    private Map<String,String> refundNotifyUrls;
+    private String transferNotifyUrl;
+    private Map<String, String> transactionNotifyUrls;
+    private Map<String, String> refundNotifyUrls;
+    private Map<String, String> transferNotifyUrls;
 }
