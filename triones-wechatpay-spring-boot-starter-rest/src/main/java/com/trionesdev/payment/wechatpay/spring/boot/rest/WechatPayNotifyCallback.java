@@ -1,7 +1,7 @@
 package com.trionesdev.payment.wechatpay.spring.boot.rest;
 
-import com.trionesdev.payment.wechatpay.v3.model.notify.WechatPayRefoundNotifyParseResponse;
-import com.trionesdev.payment.wechatpay.v3.model.notify.WechatPayTransactionNotifyParseResponse;
+import com.trionesdev.payment.wechatpay.v3.payment.model.notify.WechatPayRefoundNotifyParseResponse;
+import com.trionesdev.payment.wechatpay.v3.payment.model.notify.WechatPayTransactionNotifyParseResponse;
 import com.trionesdev.payment.wechatpay.v3.operation.model.WechatPayTransferNotifyParseResponse;
 
 public interface WechatPayNotifyCallback {

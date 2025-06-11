@@ -2,7 +2,7 @@ package com.trionesdev.payment.wechatpay.spring.boot.rest;
 
 import com.trionesdev.payment.util.JsonUtils;
 import com.trionesdev.payment.wechatpay.v3.WechatPay;
-import com.trionesdev.payment.wechatpay.v3.model.notify.WechatPayNotifyParseRequest;
+import com.trionesdev.payment.wechatpay.v3.payment.model.notify.WechatPayNotifyParseRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.ObjectProvider;
