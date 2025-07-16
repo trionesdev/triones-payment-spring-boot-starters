@@ -11,6 +11,7 @@
         <module>triones-wechatpay-spring-boot-starter</module>
         <module>triones-wechatpay-spring-boot-starter-rest</module>
         <module>triones-payment-spring-boot-dependencies</module>
+        <module>triones-alipay-spring-boot-starter</module>
     </modules>
 
     <properties>
