@@ -1,9 +1,9 @@
 package com.trionesdev.payment.wechatpay.spring.boot.rest;
 
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
 @Configuration
-@ComponentScan(basePackages = {"com.trionesdev.payment.spring.boot.wechatpay.rest"})
+@Import(WechatPayResource.class)
 public class WechatPayRestAutoConfiguration {
 }

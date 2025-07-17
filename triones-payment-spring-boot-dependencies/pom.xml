@@ -42,6 +42,17 @@
                 <artifactId>triones-wechatpay-spring-boot-starter-rest</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.trionesdev.payment</groupId>
+                <artifactId>triones-alipay-spring-boot-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.trionesdev.payment</groupId>
+                <artifactId>triones-alipay-spring-boot-starter-rest</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
