@@ -1,6 +1,6 @@
 package com.trionesdev.payment.wechatpay.spring.boot.rest;
 
-import com.trionesdev.payment.util.JsonUtils;
+import com.trionesdev.payment.util.GsonUtils;
 import com.trionesdev.payment.wechatpay.v3.WechatPay;
 import com.trionesdev.payment.wechatpay.v3.payment.model.notify.WechatPayNotifyParseRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -21,6 +21,7 @@ public class WechatPayResource {
 
     /**
      * 支付回调
+     *
      * @param nonce
      * @param signature
      * @param timestamp
@@ -47,7 +48,7 @@ public class WechatPayResource {
             }
         } catch (Exception e) {
             try {
-                servletResponse.sendError(HttpStatus.INTERNAL_SERVER_ERROR.value(), JsonUtils.writeValueAsString(TransactionNotifyVO.builder().code("FAIL").message(e.getMessage()).build()));
+                servletResponse.sendError(HttpStatus.INTERNAL_SERVER_ERROR.value(), GsonUtils.toJson(TransactionNotifyVO.builder().code("FAIL").message(e.getMessage()).build()));
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }
@@ -57,6 +58,7 @@ public class WechatPayResource {
 
     /**
      * 退款回调
+     *
      * @param nonce
      * @param signature
      * @param timestamp
@@ -83,7 +85,7 @@ public class WechatPayResource {
             }
         } catch (Exception e) {
             try {
-                servletResponse.sendError(HttpStatus.INTERNAL_SERVER_ERROR.value(), JsonUtils.writeValueAsString(TransactionNotifyVO.builder().code("FAIL").message(e.getMessage()).build()));
+                servletResponse.sendError(HttpStatus.INTERNAL_SERVER_ERROR.value(), GsonUtils.toJson(TransactionNotifyVO.builder().code("FAIL").message(e.getMessage()).build()));
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }
@@ -94,6 +96,7 @@ public class WechatPayResource {
 
     /**
      * 转账回调
+     *
      * @param nonce
      * @param signature
      * @param timestamp
@@ -120,7 +123,7 @@ public class WechatPayResource {
             }
         } catch (Exception e) {
             try {
-                servletResponse.sendError(HttpStatus.INTERNAL_SERVER_ERROR.value(), JsonUtils.writeValueAsString(TransactionNotifyVO.builder().code("FAIL").message(e.getMessage()).build()));
+                servletResponse.sendError(HttpStatus.INTERNAL_SERVER_ERROR.value(), GsonUtils.toJson(TransactionNotifyVO.builder().code("FAIL").message(e.getMessage()).build()));
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }
