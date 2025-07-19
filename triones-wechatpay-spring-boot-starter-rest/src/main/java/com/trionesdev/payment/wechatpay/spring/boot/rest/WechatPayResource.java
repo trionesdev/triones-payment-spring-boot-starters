@@ -22,13 +22,13 @@ public class WechatPayResource {
     /**
      * 支付回调
      *
-     * @param nonce
-     * @param signature
-     * @param timestamp
-     * @param serial
-     * @param body
-     * @param servletResponse
-     * @return
+     * @param nonce nonce
+     * @param signature signature
+     * @param timestamp 时间戳
+     * @param serial 序列号
+     * @param body 内容
+     * @param servletResponse HttpServletResponse
+     * @return 结果
      */
     @PostMapping(value = "transaction-notify")
     public TransactionNotifyVO transactionNotify(
@@ -59,13 +59,13 @@ public class WechatPayResource {
     /**
      * 退款回调
      *
-     * @param nonce
-     * @param signature
-     * @param timestamp
-     * @param serial
-     * @param body
-     * @param servletResponse
-     * @return
+     * @param nonce nonce
+     * @param signature signature
+     * @param timestamp 时间戳
+     * @param serial 序列号
+     * @param body 内容
+     * @param servletResponse HttpServletResponse
+     * @return 结果
      */
     @PostMapping(value = "refund-notify")
     public TransactionNotifyVO refundNotify(
@@ -97,13 +97,13 @@ public class WechatPayResource {
     /**
      * 转账回调
      *
-     * @param nonce
-     * @param signature
-     * @param timestamp
-     * @param serial
-     * @param body
-     * @param servletResponse
-     * @return
+     * @param nonce nonce
+     * @param signature signature
+     * @param timestamp 时间戳
+     * @param serial 序列号
+     * @param body 内容
+     * @param servletResponse HttpServletResponse
+     * @return 结果
      */
     @PostMapping(value = "transfer-notify")
     public TransactionNotifyVO transferNotify(
