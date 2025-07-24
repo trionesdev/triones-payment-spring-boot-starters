@@ -18,16 +18,16 @@ public class AlipayAutoConfiguration {
     private final AlipayPayProperties alipayPayProperties;
 
     @Bean
-    public Alipay alipay(){
+    public Alipay alipay() {
         return new Alipay(alipayIntegrationConfig());
     }
 
-    private AlipayConfig alipayIntegrationConfig(){
+    private AlipayConfig alipayIntegrationConfig() {
         AlipayConfig config = new AlipayConfig();
         config.setAppId(alipayPayProperties.getAppId());
         config.setPrivateKey(alipayPayProperties.getPrivateKey());
         config.setAlipayPublicKey(alipayPayProperties.getAlipayPublicKey());
-
+        config.setNotifyUrl(alipayIntegrationConfig().getNotifyUrl());
         return config;
     }
 }

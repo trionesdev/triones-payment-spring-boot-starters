@@ -19,10 +19,6 @@ public class AlipayPayProperties {
     private String alipayPublicCertContent;
     private String rootCertContent;
 
-    private String transactionNotifyUrl;
-    private String refundNotifyUrl;
-    private String transferNotifyUrl;
-    private Map<String, String> transactionNotifyUrls;
-    private Map<String, String> refundNotifyUrls;
-    private Map<String, String> transferNotifyUrls;
+    private String notifyUrl;
+    private Map<String, String> notifyUrls;
 }
