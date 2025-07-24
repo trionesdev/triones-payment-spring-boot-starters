@@ -27,7 +27,7 @@ public class AlipayAutoConfiguration {
         config.setAppId(alipayPayProperties.getAppId());
         config.setPrivateKey(alipayPayProperties.getPrivateKey());
         config.setAlipayPublicKey(alipayPayProperties.getAlipayPublicKey());
-        config.setNotifyUrl(alipayIntegrationConfig().getNotifyUrl());
+        config.setNotifyUrl(alipayPayProperties.getNotifyUrl());
         return config;
     }
 }
