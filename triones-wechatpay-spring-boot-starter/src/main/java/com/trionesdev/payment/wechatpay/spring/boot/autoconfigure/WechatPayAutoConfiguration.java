@@ -45,6 +45,7 @@ public class WechatPayAutoConfiguration {
                 .apiV3Key(wxPayProperties.getApiV3Key())
                 .transactionNotifyUrl(wxPayProperties.getTransactionNotifyUrl())
                 .refundNotifyUrl(wxPayProperties.getRefundNotifyUrl())
+                .transferNotifyUrl(wxPayProperties.getTransferNotifyUrl())
                 .transactionNotifyUrls(wxPayProperties.getTransactionNotifyUrls())
                 .refundNotifyUrls(wxPayProperties.getRefundNotifyUrls())
                 .build();
