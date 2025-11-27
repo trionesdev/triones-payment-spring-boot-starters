@@ -6,7 +6,6 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../moensun-pay/pom.xml" />
-        <option value="$PROJECT_DIR$/../triones-payment/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

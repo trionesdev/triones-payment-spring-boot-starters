@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.trionesdev.payment</groupId>
-        <artifactId>payment-spring-boot-starters</artifactId>
+        <artifactId>starter</artifactId>
         <version>3.0.0-SNAPSHOT</version>
     </parent>
-    <artifactId>payment-wechatpay-spring-boot-starter</artifactId>
-    <name>Triones:Payment:WechatPay:Starter</name>
+    <artifactId>payment-alipay-spring-boot-starter</artifactId>
+    <name>Triones:Payment:SpringBootStarter:Alipay</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -38,8 +38,7 @@
         </dependency>
         <dependency>
             <groupId>com.trionesdev.payment</groupId>
-            <artifactId>payment-wechatpay</artifactId>
+            <artifactId>payment-alipay</artifactId>
         </dependency>
-
     </dependencies>
 </project>

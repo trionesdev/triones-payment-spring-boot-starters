@@ -9,8 +9,7 @@
     <url>http://maven.apache.org</url>
     <modules>
         <module>payment-spring-boot-dependencies</module>
-        <module>payment-wechatpay-spring-boot-starter</module>
-        <module>payment-alipay-spring-boot-starter</module>
+        <module>starter</module>
     </modules>
 
     <properties>
@@ -19,17 +18,6 @@
         <kotlin.version>2.1.21</kotlin.version>
     </properties>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>com.trionesdev.payment</groupId>
-                <artifactId>payment-spring-boot-dependencies</artifactId>
-                <version>${project.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <profiles>
         <profile>
