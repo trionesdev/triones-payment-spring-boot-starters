@@ -9,7 +9,7 @@
         <version>3.0.0-SNAPSHOT</version>
     </parent>
     <packaging>pom</packaging>
-    <artifactId>starter</artifactId>
+    <artifactId>spring-boot-starter</artifactId>
     <name>Triones:Payment:SpringBoot:Starter</name>
     <modules>
         <module>payment-wechatpay-spring-boot-starter</module>
